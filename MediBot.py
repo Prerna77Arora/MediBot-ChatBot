@@ -33,7 +33,7 @@ def load_llm(huggingface_repo_id , HF_TOKEN):
         repo_id=huggingface_repo_id,
         temperature=0.5,
         task="text-generation",  
-        model_kwargs={"token": "HF_TOKEN" , "max_length": 512}
+        model_kwargs={"token": HF_TOKEN , "max_length": 512}
     )
     return llm
 
@@ -102,4 +102,5 @@ def main():
             st.error(f"Error: {str(e)}")
 
 if __name__ == "__main__":
+
     main()
